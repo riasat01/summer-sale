@@ -21,6 +21,16 @@ function setTotalPrice(price){
     totalPrice += price;
     totalPrice = totalPrice.toFixed(2);
     priceString.innerText =totalPrice + 'TK';
+    if(totalPrice > 0){
+        const purchaseBtn = document.querySelector('#purchase');
+        purchaseBtn.removeAttribute('disabled');
+        purchaseBtn.style.backgroundColor = '#E527B2';
+    }
+    if(totalPrice >= 200){
+        const applyBtn = document.querySelector('#apply');
+        applyBtn.removeAttribute('disabled');
+        applyBtn.style.backgroundColor = '#E527B2';
+    }
 }
 
 const cart = document.getElementById('cart');
