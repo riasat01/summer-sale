@@ -54,4 +54,23 @@ function process(card){
 
 document.querySelector('#refresh').addEventListener('click',function(){
     window.location.reload();
+});
+
+const apply = document.querySelector('#apply').addEventListener('click', function(){
+    console.log("apply");
+     const couponInput = document.querySelector('#coupon');
+     const coupon = couponInput.value;
+     if(coupon === "SELL200"){
+        let totalPrice = parseFloat(document.getElementById('total-price').innerText);
+        const discount = document.getElementById('discount');
+        const total = document.getElementById('total');
+        const d = (totalPrice * 0.2).toFixed(2);
+        totalPrice -= d;
+        discount.innerText = d + 'TK';
+        total.innerText = totalPrice + 'TK';
+        couponInput.value = '';
+     }else if(coupon !== "SELL200"){
+        alert('Please enter correct coupon');
+        couponInput.value = '';
+     }
 })
