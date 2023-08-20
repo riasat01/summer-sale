@@ -18,10 +18,10 @@
     <!-- header section -->
 
     <header
-        class="min-h-screen px-4 md:px-8 lg:px-36 bg-[#F9F6E2] flex flex-col lg:flex-row gap-5 justify-center items-center">
+        class="min-h-screen px-4 md:px-8 lg:px-36 bg-[#F9F6E2] flex flex-col lg:flex-row gap-5 justify-between items-center">
         <section class="text-center flex-1">
             <p class="text-[#111] text-xl md:text-3xl font-medium">---SALE FEVER---</p>
-            <h1 class="mt-5 md:mt-11 mb-10 md:mb-20 text-[#111] text-4xl md:text-6xl font-bold">Purchase TK 200 or<br>
+            <h1 class="mt-5 md:mt-11 mb-10 md:mb-20 text-[#111] text-4xl md:text-5xl font-bold">Purchase TK 200 or<br>
                 above & get <span class="text-[#E527B2]">20% off</span></h1>
             <div class="flex justify-center items-center gap-4">
                 <p class="text-[#111] text-lg md:text-2xl font-medium">Use Promo Code</p>
@@ -50,7 +50,7 @@
 
                     <!-- card 1 -->
 
-                    <div class="card bg-base-100 shadow-xl">
+                    <div onclick="process(this)" class="card bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="/images/prod1.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -69,7 +69,7 @@
 
                     <!-- card 2 -->
 
-                    <div class="card bg-base-100 shadow-xl">
+                    <div onclick="process(this)" class="card bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="/images/prod2.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -88,7 +88,7 @@
 
                     <!-- card 3 -->
 
-                    <div class="card bg-base-100 shadow-xl">
+                    <div onclick="process(this)" class="card bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="/images/prod3.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -117,7 +117,7 @@
 
                     <!-- card 1 -->
 
-                    <div class="card bg-base-100 shadow-xl">
+                    <div onclick="process(this)" class="card bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="/images/prod4.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -136,7 +136,7 @@
 
                     <!-- card 2 -->
 
-                    <div class="card bg-base-100 shadow-xl">
+                    <div onclick="process(this)" class="card bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="/images/prod5.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -155,7 +155,7 @@
 
                     <!-- card 3 -->
 
-                    <div class="card bg-base-100 shadow-xl">
+                    <div onclick="process(this)" class="card bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="/images/prod6.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -184,7 +184,7 @@
 
                     <!-- card 1 -->
 
-                    <div class="card bg-base-100 shadow-xl">
+                    <div onclick="process(this)" class="card bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="/images/prod7.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -203,7 +203,7 @@
 
                     <!-- card 2 -->
 
-                    <div class="card bg-base-100 shadow-xl">
+                    <div onclick="process(this)" class="card bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="/images/prod8.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -222,7 +222,7 @@
 
                     <!-- card 3 -->
 
-                    <div class="card bg-base-100 shadow-xl">
+                    <div onclick="process(this)" class="card bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="/images/prod9.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -244,24 +244,29 @@
         <Section class="mt-48 col-span-4 md:col-span-2 lg:col-span-1">
             <div class="bg-white rounded-lg shadow-lg">
                 <h3 class="text-[#111] text-2xl font-semibold p-6">Have coupon?</h3>
-                <input
-                    class="ml-6 mb-6 w-36 rounded-tl-lg rounded-bl-lg border-y-2 border-l-2 border-gray-100 text-lg font-semibold px-3 py-1"
-                    type="text" name="" id="" placeholder="Coupon code">
-                <button
-                    class="mr-6 mb-6 bg-[#E527B2] text-white text-lg font-semibold px-3 py-1 rounded-tr-lg rounded-br-lg">Apply</button>
+                <div class="w-full flex gap-0">
+                    <input
+                        class="ml-6 mb-6 w-36 rounded-tl-lg rounded-bl-lg border-y-2 border-l-2 border-gray-100 text-lg font-semibold px-3 py-1"
+                        type="text" name="" id="" placeholder="Coupon code">
+                    <button
+                        class="mr-6 mb-6 bg-[#E527B2] text-white font-semibold px-3 py-2 rounded-tr-lg rounded-br-lg">Apply</button>
+                </div>
             </div>
-            <div class="relative bg-white rounded-lg shadow-lg p-6 mt-6">
-                <ol id="cart">
+            <div class="bg-white rounded-lg shadow-lg p-6 mt-6">
+                <ol id="cart" class="text-lg font-semibold">
 
                 </ol>
-                <hr class="my-4">
-                <p class="text-lg font-semibold">Total price: <span class="text-gray-400">00.00TK</span></p>
-                <p class="text-lg font-semibold"> Discount : <span class="text-gray-400">00.40TK</span></p>
-                <p class="text-lg font-semibold">Total: <span class="text-gray-400">00.60TK</span></p>
-                <hr class="my-4 mb-4">
-                <button
-                    class="w-80 md:w-72 lg:w-56 absolute top-44 bg-[#E527B2] text-white text-lg font-semibold px-6 py-2 rounded-lg" onclick="my_modal_1.showModal()">Make
-                    Purchase</button>
+                <div class="relative">
+                    <hr class="my-4">
+                    <p class="text-lg font-semibold">Total price: <span id="total-price" class="text-gray-400">00.00TK</span></p>
+                    <p class="text-lg font-semibold"> Discount : <span class="text-gray-400">00.00TK</span></p>
+                    <p class="text-lg font-semibold">Total: <span class="text-gray-400">00.00TK</span></p>
+                    <hr class="my-4 mb-4">
+                    <button
+                        class="absolute top-32 left-4 bg-[#E527B2] text-white text-lg font-semibold px-24 md:px-16 lg:px-8 py-3 rounded-lg"
+                        onclick="my_modal_1.showModal()">Make
+                        Purchase</button>
+                </div>
                 <!-- Open the modal using ID.showModal() method -->
                 <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
                 <dialog id="my_modal_1" class="modal">
@@ -271,13 +276,17 @@
                         <p class="py-4">Your Purchase the product</p>
                         <div class="modal-action">
                             <!-- if there is a button in form, it will close the modal -->
-                            <a href="index.html"><button class="btn bg-[#E527B2] text-white text-lg font-semibold px-3 py-1 rounded-lg">Go Home</button></a>
+                            <a href="index.html"><button
+                                    class="btn bg-[#E527B2] text-white text-lg font-semibold px-3 py-1 rounded-lg">Go
+                                    Home</button></a>
                         </div>
                     </form>
                 </dialog>
             </div>
         </Section>
     </main>
+
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
