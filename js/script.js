@@ -51,3 +51,7 @@ function process(card){
     const price = getPrice(card);
     setTotalPrice(price);
 }
+
+document.querySelector('#refresh').addEventListener('click',function(){
+    window.location.reload();
+})
